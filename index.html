@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071B49">
 
 <title>Bosco Fretes | Para Todo o Brasil</title>
 
@@ -17,6 +17,7 @@
 :root {
     --azul: #071B49;
     --verde: #008C45;
+    --verde-escuro: #00763B;
     --amarelo: #FFDF00;
     --branco: #FFFFFF;
     --cinza: #F2F4F6;
@@ -30,11 +31,38 @@
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     color: var(--texto);
     background: var(--branco);
     line-height: 1.6;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }
 
 a {
@@ -44,7 +72,7 @@ a {
 /* CABEÇALHO */
 
 header {
-    background: var(--azul);
+    background: var(--branco);
     padding: 15px 6%;
     display: flex;
     justify-content: space-between;
@@ -60,24 +88,9 @@ header {
 }
 
 .logo img {
-    width: 75px;
-    height: 75px;
+    width: 110px;
+    height: 110px;
     object-fit: contain;
-}
-
-.logo-texto {
-    color: var(--branco);
-}
-
-.logo-texto h1 {
-    font-size: 23px;
-    letter-spacing: 1px;
-}
-
-.logo-texto p {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--amarelo);
 }
 
 nav {
@@ -87,13 +100,16 @@ nav {
 }
 
 nav a {
-    color: var(--branco);
-    font-size: 14px;
+    color: var(--azul);
+    font-size: 1rem;
     font-weight: bold;
+    padding: 10px 4px;
 }
 
-nav a:hover {
-    color: var(--amarelo);
+nav a:hover,
+nav a:focus-visible {
+    color: var(--verde-escuro);
+    text-decoration: underline;
 }
 
 /* FAIXA INSTITUCIONAL */
@@ -121,15 +137,15 @@ nav a:hover {
     text-align: center;
 }
 
-.hero h2 {
-    font-size: 43px;
+.hero h1 {
+    font-size: clamp(1.9rem, 1.2rem + 3vw, 2.7rem);
     margin-bottom: 20px;
 }
 
 .hero p {
     max-width: 750px;
     margin: auto;
-    font-size: 19px;
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.2rem);
 }
 
 .botao {
@@ -139,12 +155,14 @@ nav a:hover {
     background: var(--amarelo);
     color: var(--azul);
     border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
     transition: 0.3s;
 }
 
-.botao:hover {
-    background: var(--verde);
+.botao:hover,
+.botao:focus-visible {
+    background: var(--verde-escuro);
     color: var(--branco);
 }
 
@@ -157,13 +175,14 @@ section {
 
 section h2 {
     color: var(--azul);
-    font-size: 32px;
+    font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2rem);
     margin-bottom: 20px;
 }
 
 .subtitulo {
     max-width: 750px;
     margin: 0 auto 35px;
+    font-size: 1.1rem;
 }
 
 .linha {
@@ -198,11 +217,11 @@ section h2 {
 .card h3 {
     color: var(--azul);
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .card p {
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 /* SOBRE */
@@ -212,9 +231,10 @@ section h2 {
 }
 
 .sobre p {
-    max-width: 850px;
+    max-width: 70ch;
     margin: auto;
-    line-height: 1.9;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* MISSÃO, VISÃO E VALORES */
@@ -241,7 +261,7 @@ section h2 {
 
 .blog .card a {
     display: inline-block;
-    color: var(--verde);
+    color: var(--verde-escuro);
     font-weight: bold;
     margin-top: 20px;
 }
@@ -287,26 +307,27 @@ section h2 {
 /* RODAPÉ */
 
 footer {
-    background: #04112D;
-    color: var(--branco);
+    background: var(--branco);
+    color: var(--azul);
     padding: 35px 8%;
     text-align: center;
+    border-top: 6px solid var(--verde);
 }
 
 footer img {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     margin-bottom: 10px;
 }
 
 footer p {
-    font-size: 13px;
+    font-size: 0.9rem;
     margin: 5px;
 }
 
 footer strong {
-    color: var(--amarelo);
+    color: var(--azul);
 }
 
 /* WHATSAPP */
@@ -315,10 +336,11 @@ footer strong {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--verde);
+    background: var(--verde-escuro);
     color: var(--branco);
     padding: 14px 20px;
     border-radius: 30px;
+    font-size: 1rem;
     font-weight: bold;
     box-shadow: 0 3px 12px #00000030;
     z-index: 10;
@@ -343,27 +365,26 @@ footer strong {
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 0.95rem;
+    }
+
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .whatsapp {
+        bottom: 14px;
+        right: 14px;
+        padding: 12px 18px;
     }
 
     .hero {
         padding: 85px 7%;
     }
 
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
     section {
         padding: 55px 6%;
-    }
-
-    section h2 {
-        font-size: 27px;
     }
 
 }
@@ -380,12 +401,7 @@ footer strong {
     <div class="logo">
 
         <img src="imagens/logo-bosco.png"
-             alt="Logo Bosco Fretes">
-
-        <div class="logo-texto">
-            <h1>BOSCO FRETES</h1>
-            <p>PARA TODO O BRASIL</p>
-        </div>
+             alt="Bosco Fretes - Para Todo o Brasil">
 
     </div>
 
@@ -409,7 +425,7 @@ footer strong {
 
 <div class="hero" id="inicio">
 
-    <h2>Movendo negócios. Conectando destinos.</h2>
+    <h1>Movendo negócios. Conectando destinos.</h1>
 
     <p>
         Transporte e soluções logísticas
@@ -632,7 +648,7 @@ footer strong {
         e solicite seu orçamento.
     </p>
 
-    <a href="mailto:contato@boscofretes.com.br"
+    <a href="mailto:boscofretes.ad@gmail.com"
        class="botao">
         ENVIAR E-MAIL
     </a>
@@ -644,7 +660,7 @@ footer strong {
 <!-- WHATSAPP -->
 
 <a class="whatsapp"
-   href="https://wa.me/5500000000000"
+   href="https://wa.me/5524999639446"
    target="_blank"
    rel="noopener">
    WhatsApp
@@ -656,10 +672,6 @@ footer strong {
 
     <img src="imagens/logo-bosco.png"
          alt="Bosco Fretes">
-
-    <p><strong>BOSCO FRETES</strong></p>
-
-    <p>PARA TODO O BRASIL</p>
 
     <p>
         © 2026 Bosco Fretes.
