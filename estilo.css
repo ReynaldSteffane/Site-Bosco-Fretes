@@ -305,6 +305,10 @@ section h2 {
     border-bottom-color: var(--amarelo);
 }
 
+.avaliacoes .botao {
+    margin-top: 35px;
+}
+
 .estrelas {
     color: #E8A700;
     font-size: 1.3rem;
