@@ -289,6 +289,61 @@ section h2 {
     color: var(--branco);
 }
 
+/* AVALIAÇÕES */
+
+.avaliacoes {
+    background: var(--cinza);
+}
+
+.avaliacoes .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.avaliacoes .card {
+    max-width: none;
+    min-width: 0;
+}
+
+.avaliacoes .destaque {
+    grid-column: span 2;
+}
+
+.avaliacoes .card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-bottom-color: var(--amarelo);
+}
+
+.estrelas {
+    color: #E8A700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.avaliacoes blockquote {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.autor {
+    margin-top: 18px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+.autor span {
+    display: block;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
 /* CONTATO */
 
 .contato {
@@ -354,6 +409,10 @@ footer strong {
 
 @media (max-width: 1000px) {
 
+    .avaliacoes .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     header {
         justify-content: center;
     }
@@ -367,6 +426,14 @@ footer strong {
 /* CELULARES */
 
 @media (max-width: 750px) {
+
+    .avaliacoes .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .avaliacoes .destaque {
+        grid-column: auto;
+    }
 
     header {
         justify-content: center;
@@ -653,6 +720,78 @@ footer strong {
         <div class="card">
             <h3>Logística</h3>
         </div>
+
+    </div>
+
+</section>
+
+<!-- AVALIAÇÕES -->
+
+<section class="avaliacoes" id="avaliacoes">
+
+    <h2>O que nossos clientes dizem</h2>
+    <div class="linha"></div>
+
+    <p class="subtitulo">
+        Avaliações reais de clientes da Bosco Fretes no Google.
+    </p>
+
+    <div class="cards">
+
+        <figure class="card destaque">
+            <div class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>
+                <p>“Empresa extremamente séria, com muito comprometimento e pontualidade. Não são invasivos com perguntas no ato da mudança e demonstram total cuidado com os móveis e com a organização de onde tudo vai ficar nos cômodos. O responsável acompanha de perto e vai até o local para verificar se está tudo correto. Sem dúvida, minha melhor experiência com frete em Angra dos Reis! Recomendo de olhos fechados.”</p>
+            </blockquote>
+            <figcaption class="autor">
+                Ana Carolina
+                <span>Avaliação no Google</span>
+            </figcaption>
+        </figure>
+
+        <figure class="card">
+            <div class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>
+                <p>“Profissionais atenciosos, competentes, pontuais e cuidadosos com a mobília na hora da mudança. Super recomendo!”</p>
+            </blockquote>
+            <figcaption class="autor">
+                Stella B.
+                <span>Avaliação no Google</span>
+            </figcaption>
+        </figure>
+
+        <figure class="card">
+            <div class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>
+                <p>“Excelente empresa de transporte! Equipe muito responsável, pontual e cuidadosa com os móveis e objetos durante toda a mudança. Serviço organizado, atendimento atencioso e preço justo. Recomendo para quem precisa de mudanças, fretes e transportes em geral.”</p>
+            </blockquote>
+            <figcaption class="autor">
+                Gerson V.
+                <span>Avaliação no Google</span>
+            </figcaption>
+        </figure>
+
+        <figure class="card">
+            <div class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>
+                <p>“Boa noite, foi uma mudança muito tranquila, o motorista muito paciente e o ajudante muito ativo, ambos com muita boa vontade de ajudar.”</p>
+            </blockquote>
+            <figcaption class="autor">
+                Andreia F.
+                <span>Avaliação no Google</span>
+            </figcaption>
+        </figure>
+
+        <figure class="card">
+            <div class="estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>
+                <p>“Ótimo profissional. Consegue organizar perfeitamente a mudança, sem danificar nada. É muito gentil, educado e simpático. Indico o trabalho.”</p>
+            </blockquote>
+            <figcaption class="autor">
+                Monique O.
+                <span>Avaliação no Google</span>
+            </figcaption>
+        </figure>
 
     </div>
 
