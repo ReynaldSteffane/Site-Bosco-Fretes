@@ -278,17 +278,41 @@ section h2 {
 
 /* GALERIA */
 
-.galeria .card {
-    background: var(--azul);
-    color: var(--branco);
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.galeria-titulo {
+    color: var(--azul);
+    font-size: 1.3rem;
+    margin: 40px 0 18px;
 }
 
-.galeria .card h3 {
-    color: var(--branco);
+.galeria-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.galeria-grade figure {
+    margin: 0;
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px #071B4915;
+    border-bottom: 4px solid var(--verde);
+    text-align: left;
+}
+
+.galeria-grade img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 60%;
+}
+
+.galeria-grade figcaption {
+    padding: 12px 15px;
+    font-size: 0.95rem;
 }
 
 /* AVALIAÇÕES */
