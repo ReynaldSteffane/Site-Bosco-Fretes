@@ -396,18 +396,6 @@ section h2 {
     background: var(--verde);
 }
 
-.contato .botao-contorno {
-    background: transparent;
-    color: var(--branco);
-    border: 2px solid var(--branco);
-}
-
-.contato .botao-contorno:hover,
-.contato .botao-contorno:focus-visible {
-    background: var(--branco);
-    color: var(--azul);
-}
-
 .contato .dicas {
     font-size: 0.95rem;
     opacity: 0.9;
