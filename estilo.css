@@ -285,14 +285,17 @@ section h2 {
 }
 
 .galeria-grade {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 18px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .galeria-grade figure {
+    flex: 0 1 calc(25% - 14px);
+    min-width: 240px;
     margin: 0;
     background: var(--branco);
     border-radius: 10px;
@@ -725,6 +728,14 @@ footer strong {
 
     .artigo-layout {
         padding: 40px 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .galeria-grade figure {
+        flex-basis: 100%;
     }
 
 }
