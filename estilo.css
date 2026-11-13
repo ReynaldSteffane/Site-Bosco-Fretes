@@ -369,6 +369,50 @@ section h2 {
     margin: 15px 8px;
 }
 
+.contato .atendimento {
+    font-weight: bold;
+    color: var(--amarelo);
+}
+
+.contato .botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0 10px;
+}
+
+.contato .botoes-contato .botao {
+    margin: 0;
+}
+
+.contato .botao-whatsapp {
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.contato .botao-whatsapp:hover,
+.contato .botao-whatsapp:focus-visible {
+    background: var(--verde);
+}
+
+.contato .botao-contorno {
+    background: transparent;
+    color: var(--branco);
+    border: 2px solid var(--branco);
+}
+
+.contato .botao-contorno:hover,
+.contato .botao-contorno:focus-visible {
+    background: var(--branco);
+    color: var(--azul);
+}
+
+.contato .dicas {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
 .contato .dados-contato {
     font-size: 1.15rem;
 }
