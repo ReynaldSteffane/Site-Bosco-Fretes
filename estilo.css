@@ -369,6 +369,22 @@ section h2 {
     margin: 15px 8px;
 }
 
+.contato .dados-contato {
+    font-size: 1.15rem;
+}
+
+.contato .dados-contato a {
+    color: var(--amarelo);
+    font-weight: bold;
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+}
+
+.contato .dados-contato a:hover,
+.contato .dados-contato a:focus-visible {
+    color: var(--branco);
+}
+
 /* RODAPÉ */
 
 footer {
