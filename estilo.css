@@ -644,6 +644,28 @@ footer strong {
     text-decoration: underline;
 }
 
+.artigo sup a {
+    font-weight: bold;
+    color: var(--verde-escuro);
+    padding: 0 1px;
+}
+
+.artigo .referencias {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 1.4rem;
+}
+
+.artigo .referencias li {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.artigo .referencias a {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
 .chamada {
     margin-top: 40px;
     padding: 30px;
