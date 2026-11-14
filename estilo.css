@@ -501,6 +501,25 @@ footer p {
     margin: 5px;
 }
 
+footer .instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 8px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+footer .instagram svg {
+    width: 24px;
+    height: 24px;
+}
+
+footer .instagram:hover,
+footer .instagram:focus-visible {
+    color: var(--verde-escuro);
+}
+
 footer strong {
     color: var(--azul);
 }
