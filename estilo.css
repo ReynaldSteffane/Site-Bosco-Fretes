@@ -482,6 +482,9 @@ section h2 {
 /* RODAPÉ */
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--branco);
     color: var(--azul);
     padding: 35px 8%;
