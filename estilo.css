@@ -98,6 +98,22 @@ nav a:focus-visible {
     text-decoration: underline;
 }
 
+nav .nav-instagram {
+    display: inline-flex;
+    align-items: center;
+}
+
+nav .nav-instagram svg {
+    width: 28px;
+    height: 28px;
+}
+
+nav .nav-instagram:hover,
+nav .nav-instagram:focus-visible {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
 /* FAIXA INSTITUCIONAL */
 
 .faixa {
