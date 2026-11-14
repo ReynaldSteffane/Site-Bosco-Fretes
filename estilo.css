@@ -104,6 +104,10 @@ nav .nav-whatsapp {
     align-items: center;
 }
 
+nav .nav-whatsapp + .nav-instagram {
+    margin-left: -16px;
+}
+
 nav .nav-instagram svg,
 nav .nav-whatsapp svg {
     width: 28px;
