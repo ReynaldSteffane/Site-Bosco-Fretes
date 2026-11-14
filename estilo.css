@@ -98,18 +98,22 @@ nav a:focus-visible {
     text-decoration: underline;
 }
 
-nav .nav-instagram {
+nav .nav-instagram,
+nav .nav-whatsapp {
     display: inline-flex;
     align-items: center;
 }
 
-nav .nav-instagram svg {
+nav .nav-instagram svg,
+nav .nav-whatsapp svg {
     width: 28px;
     height: 28px;
 }
 
 nav .nav-instagram:hover,
-nav .nav-instagram:focus-visible {
+nav .nav-instagram:focus-visible,
+nav .nav-whatsapp:hover,
+nav .nav-whatsapp:focus-visible {
     text-decoration: none;
     opacity: 0.8;
 }
