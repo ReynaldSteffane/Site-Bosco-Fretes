@@ -644,6 +644,13 @@ footer strong {
     text-decoration: underline;
 }
 
+.artigo > p,
+.artigo > ul li {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
 .artigo sup a {
     font-weight: bold;
     color: var(--verde-escuro);
