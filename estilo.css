@@ -501,6 +501,17 @@ footer p {
     margin: 5px;
 }
 
+.instagram-contato {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.instagram-contato svg {
+    width: 24px;
+    height: 24px;
+}
+
 footer .instagram {
     display: inline-flex;
     align-items: center;
